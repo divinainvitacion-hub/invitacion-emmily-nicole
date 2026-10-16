@@ -16,7 +16,7 @@ const eventTime = new Date('2026-11-14T19:00:00-05:00').getTime();
 function updateCountdown(){let d=eventTime-Date.now();if(d<=0){['days','hours','minutes','seconds'].forEach(id=>document.getElementById(id).textContent='0');return;}const vals={days:Math.floor(d/86400000),hours:Math.floor(d%86400000/3600000),minutes:Math.floor(d%3600000/60000),seconds:Math.floor(d%60000/1000)};Object.entries(vals).forEach(([id,v])=>document.getElementById(id).textContent=String(v).padStart(2,'0'));}updateCountdown();setInterval(updateCountdown,1000);
 // PEGA AQUÍ la URL pública de tu video o invitación (Canva, YouTube u otra plataforma).
 // Ejemplo: const VIDEO_INVITATION_URL = "https://www.youtube.com/watch?v=XXXXXXXXXXX";
-const VIDEO_INVITATION_URL = "PEGA_AQUI_LA_URL_DEL_VIDEO";
+const VIDEO_INVITATION_URL = "https://fathyc92.my.canva.site/emmily-xv";
 const canvaButton = document.getElementById('canvaButton');
 canvaButton.addEventListener('click', function(event){
   const url = VIDEO_INVITATION_URL.trim();
